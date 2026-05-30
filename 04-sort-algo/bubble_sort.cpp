@@ -3,9 +3,20 @@
 #include <vector>
 namespace {
 std::vector<int> bubbleSort(std::vector<int>& nums) {
-  // O(n^2) - Quadratic
-  // Best Case (already sorted): Θ(n)
-  // Worst Case (reverse order): Θ(n^2)
+  /**
+   * O(n^2) - Quadratic
+   * Best Case (already sorted): O(n)
+   * Worst Case (reverse order): O(n^2)
+   *
+   * Pseudocode
+   *    swapped <- true
+   *    while swapped:
+   *        swapped <- false
+   *        for i <- 1 to n - 1:
+   *            if arr[i-1] > arr[i]
+   *                swap arr[i-1] & arr[i]
+   *                swapped <- true
+   */
   bool swap{true};
   while (swap) {
     swap = false;
